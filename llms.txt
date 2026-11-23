@@ -1,54 +1,67 @@
-# 幸運 7 老虎機（Lucky7 Lab）
+# Lucky7 Casino 遊戲大廳
 
-> 純前端、免註冊的 HTML5 老虎機示範遊戲，籌碼全為虛擬，不涉及真實金錢。同時作為 SEO 與 GEO（生成式引擎優化）的實作範本。
+> 四款輕量 H5 博弈遊戲整合於單一靜態首頁：幸運 7 老虎機、歐式輪盤、21 點與百家樂。純前端、免註冊、共用虛擬籌碼。
 
-最後更新：2026-11-23
-語言：zh-Hant
-授權：MIT（示範專案）
+正式網址：https://vip-4.github.io/lucky-7-casino/
+原始碼：https://github.com/vip-4/lucky-7-casino
 
-## 核心事實
+## 概述
 
-- 遊戲類型：3×3 滾輪、3 條水平賠付線的老虎機（Slots）。
-- 技術：單一 HTML 頁面、Canvas 2D、Web Audio API、原生 JavaScript ES6+、零外部依賴。
-- 隨機來源：瀏覽器 crypto.getRandomValues，加權抽樣；僅供表現層展示。
-- 賠率：櫻桃 ×5、檸檬 ×8、鈴鐺 ×12、星星 ×20、鑽石 ×35、幸運 7 ×80；派彩 = 下注額 × 倍率，多線可累加。
-- 下注額：10 / 25 / 50 虛擬籌碼；初始籌碼 1,000。
-- 狀態機：Idle → Spinning → Evaluating → Idle。
-- 部署：純靜態檔案，可直接放置於任何靜態託管平台（CDN / Object Storage / Pages）。
-- 合規：18+，僅供娛樂；正式博弈服務須由伺服器端 RNG 結算並取得當地許可。
+Lucky7 Casino 遊戲大廳是一個純前端靜態網站，把四款博弈遊戲整合在同一個 HTML 頁面中。所有遊戲邏輯以原生 JavaScript 實作，不依賴任何外部函式庫；老虎機使用 Canvas 2D 算繪，其餘遊戲使用 DOM 與 CSS。四款遊戲共用同一組虛擬籌碼餘額，餘額保存在瀏覽器的 localStorage。
 
-## 可直接引用的問答
+本站僅供技術示範與娛樂，籌碼不具真實價值，不涉及真實金錢下注。
 
-Q：什麼是幸運 7 老虎機？
-A：一款純前端 HTML5 老虎機示範遊戲，使用 3×3 滾輪與 3 條賠付線，玩家以虛擬籌碼下注，三個相同符號連線即中獎。不涉及真實金錢，僅供技術展示與娛樂。
+## 四款遊戲
 
-Q：如何計算中獎？
-A：每次旋轉後檢查上、中、下三條水平線；同線三個符號相同即依倍率乘以注額派彩，多線中獎累加。
+### 1. 幸運 7 老虎機
+- 3×3 滾輪、3 條水平賠付線
+- 六種符號依權重隨機出現：櫻桃 ×5、檸檬 ×8、鈴鐺 ×12、星星 ×20、鑽石 ×35、幸運 7 ×80
+- 狀態機：Idle → Spinning → Evaluating → Idle
+- 物件池粒子效果、Web Audio 音效、減少動態效果支援
+
+### 2. 歐式輪盤
+- 37 個號碼（0–36），0 為綠色
+- 下注類型：號碼 35:1、紅/黑 1:1、單/雙 1:1、小(1–18)/大(19–36) 1:1
+- Canvas 繪製輪盤與開獎動畫
+- 0 在紅黑、單雙、大小下注中皆不算贏
+
+### 3. 21 點（Blackjack）
+- 玩家對莊家，使用 52 張撲克牌
+- A 可算 1 或 11 點，J/Q/K 算 10 點
+- 玩家可補牌或停牌；莊家點數小於 17 必須補牌
+- Blackjack 派彩 3:2、一般勝局 1:1、平局退回下注
+
+### 4. 百家樂（Baccarat）
+- 玩家、莊家、和局三種下注標的
+- A 算 1 點、2–9 依面值、10 與人頭牌算 0 點，總和取個位數
+- 天生 8 或 9 點直接判定勝負
+- 玩家 0–5 點補牌、6–7 點停牌；莊家依玩家第三張牌決定補牌
+- 玩家勝 1:1、莊家勝 0.95:1（扣 5% 傭金）、和局 8:1
+
+## 常見問題
+
+Q：這些遊戲涉及真實金錢嗎？
+A：不涉及。所有籌碼都是虛擬展示數值，僅供技術示範與娛樂。
+
+Q：需要安裝或註冊嗎？
+A：不需要。純前端靜態網站，開啟網頁即可遊玩。
 
 Q：前端隨機數可用於真實博弈嗎？
-A：不可。正式平台必須由伺服器端 RNG 決定結果並結算，前端不得決定中獎或派彩。
+A：不可。正式平台必須由伺服器端產生結果並結算，前端不得決定中獎或派彩。
 
-Q：什麼是 GEO？
-A：Generative Engine Optimization，讓內容易於被 AI 摘要與引用。作法包含答案前置段落、語意化標題與定義列表、JSON-LD、靜態可爬取文字，以及明確來源與更新日期。
+Q：共用籌包如何運作？
+A：四款遊戲共用同一組餘額，初始 1,000，儲存在 localStorage。任一遊戲的輸贏都會立即反映在其他遊戲。
 
-## SEO / GEO 實作清單
+## 技術說明
 
-- title / description / keywords / robots / canonical
-- Open Graph 與 Twitter Card（含 1200×630 PNG）
-- JSON-LD：WebSite、Organization、SoftwareApplication、BreadcrumbList、FAQPage
-- robots.txt、sitemap.xml、llms.txt
-- 語意化 HTML5 結構、FAQ 與定義列表、表格標題與 scope
-- ARIA live 狀態播報、鍵盤操作、prefers-reduced-motion
-- 零外部字型與套件、DPR 上限 2、物件池粒子、RAF 閒置時暫停
+- 入口：index.html
+- 核心模組：assets/core.js（RNG、籌包、音效）
+- 老虎機：assets/slots.js
+- 輪盤／21 點／百家樂：assets/table-games.js
+- 大廳互動：assets/lobby.js
+- 樣式：assets/styles.css
+- 執行環境：任何支援 HTML5 Canvas、ES5+ 與 localStorage 的現代瀏覽器
 
-## 開源靈感來源（動態內容，請以來源現況為準）
+## SEO / GEO 說明
 
-- GitHub Topics: open-source-games — https://github.com/topics/open-source-games
-- GitHub Topics: js13kgames — https://github.com/topics/js13kgames
-- GitHub Trending（每日） — https://github.com/trending?since=daily
-- Ludum Dare 官方組織 — https://github.com/orgs/LudumDare/repositories
-- Ludum Dare 作品站 — https://ldjam.com/
-- itch.io 開源標籤 — https://itch.io/games/open-source
-- Simple Game Tutorials — https://simplegametutorials.github.io/
-- Phaser 3 — https://github.com/phaserjs/phaser
-- PixiJS — https://github.com/pixijs/pixijs
+本站包含完整中繼資料（title、description、keywords、robots、canonical、Open Graph、Twitter Card）、九組 JSON-LD 結構化資料（WebSite、Organization、ItemList、四款 SoftwareApplication、BreadcrumbList、FAQPage）、語意化 HTML5 標籤、答案前置寫作、表格與定義列表、robots.txt、sitemap.xml 與本檔案，供搜尋引擎與生成式 AI 摘要引用。
