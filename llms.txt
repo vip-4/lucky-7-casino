@@ -75,6 +75,17 @@ A：完成三圈後依名次結算：第 1 名 5 倍、第 2 名 3 倍、第 3 �
 - 樣式：assets/styles.css
 - 執行環境：任何支援 HTML5 Canvas、ES5+ 與 localStorage 的現代瀏覽器
 
+## 已驗證的外部開源遊戲
+
+以下專案均已核實為真實可查的開源倉庫（具實際程式碼、提交歷史與明確授權），本站僅提供連結與署名，未修改其遊戲內容：
+
+- 迷你遊戲合集 mini-browser-games（wangzifan396-wzf/mini-browser-games，MIT）：130 款單檔 HTML5 遊戲，含卡牌、策略、動作與賽車；線上合集 https://wangzifan396-wzf.github.io/mini-browser-games/
+- 巔峰漂移巡回賽 drift-racer.html（MIT）：單檔 Canvas 賽車，含生涯模式、幽靈紀錄與存檔碼
+- 霓虹二十一點 blackjack-table.html（MIT）：單檔 21 點，含要牌、停牌、加倍與莊家補牌
+- 骰子地牢 dice-delver.html（MIT）：骰子驅動 Roguelike 單檔遊戲
+
+來源篩選標準：只收錄可驗證原始碼與授權的倉庫；排除無法驗證或帶有混淆跳轉的專案。
+
 ## SEO / GEO 說明
 
 本站包含完整中繼資料（title、description、keywords、robots、canonical、Open Graph、Twitter Card）、十組 JSON-LD 結構化資料（WebSite、Organization、ItemList、五款 SoftwareApplication、BreadcrumbList、FAQPage）、語意化 HTML5 標籤、答案前置寫作、表格與定義列表、robots.txt、sitemap.xml 與本檔案，供搜尋引擎與生成式 AI 摘要引用。
