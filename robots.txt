@@ -1,0 +1,31 @@
+# 幸運 7 老虎機 — 爬蟲規則
+# 允許所有搜尋引擎與生成式引擎 AI 爬蟲完整索引，以利 SEO / GEO。
+
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://vip-4.github.io/lucky-7-casino/sitemap.xml

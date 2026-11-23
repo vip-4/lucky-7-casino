@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <!-- ============ 基礎 Meta ============ -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1021">
+  <meta name="color-scheme" content="dark">
+  <title>幸運 7 老虎機｜輕量 Casino H5 遊戲與 SEO/GEO 示範</title>
+  <meta name="description" content="一款純前端、免註冊的輕量級老虎機 H5 遊戲示範。完整 SEO meta、JSON-LD 結構化資料、GEO 生成式引擎優化、RWD 與無障礙設計。所有籌碼皆為虛擬，僅供娛樂。">
+  <meta name="keywords" content="老虎機, Slots, Casino H5 遊戲, HTML5 遊戲, Canvas 遊戲, SEO 優化, GEO 生成式引擎優化, 開源遊戲, 靜態網站, 無障礙遊戲">
+  <meta name="author" content="Lucky7 Lab（開源 H5 遊戲示範）">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <link rel="canonical" href="https://vip-4.github.io/lucky-7-casino/">
+
+  <!-- ============ Open Graph（Facebook / LINE / 通用爬蟲） ============ -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="幸運 7 老虎機">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:title" content="幸運 7 老虎機｜輕量 Casino H5 遊戲與 SEO/GEO 示範">
+  <meta property="og:description" content="純前端 Canvas 老虎機示範：3 條賠付線、Web Audio 音效、RWD 與鍵盤操作，並示範完整 SEO/GEO 最佳實踐。">
+  <meta property="og:url" content="https://vip-4.github.io/lucky-7-casino/">
+  <meta property="og:image" content="https://vip-4.github.io/lucky-7-casino/assets/og-image.png">
+  <meta property="og:image:secure_url" content="https://vip-4.github.io/lucky-7-casino/assets/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="老虎機遊戲畫面示意：三個滾輪顯示櫻桃、檸檬與幸運 7">
+
+  <!-- ============ Twitter Card ============ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="幸運 7 老虎機｜輕量 Casino H5 遊戲與 SEO/GEO 示範">
+  <meta name="twitter:description" content="純前端 Canvas 老虎機示範，含完整 SEO meta、JSON-LD 與 GEO 可摘要內容。">
+  <meta name="twitter:image" content="https://vip-4.github.io/lucky-7-casino/assets/og-image.png">
+  <meta name="twitter:image:alt" content="老虎機遊戲畫面示意：三個滾輪顯示櫻桃、檸檬與幸運 7">
+
+  <!-- ============ 資源與結構化資料 ============ -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://vip-4.github.io/lucky-7-casino/#website",
+    "url": "https://vip-4.github.io/lucky-7-casino/",
+    "name": "幸運 7 老虎機｜輕量 Casino H5 遊戲示範",
+    "inLanguage": "zh-Hant",
+    "description": "純前端 Canvas 老虎機遊戲示範，附完整 SEO 與 GEO 優化實作。",
+    "publisher": { "@id": "https://vip-4.github.io/lucky-7-casino/#organization" },
+    "datePublished": "2026-11-23",
+    "dateModified": "2026-11-23"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://vip-4.github.io/lucky-7-casino/#organization",
+    "name": "Lucky7 Lab",
+    "alternateName": "開源 H5 遊戲示範實驗室",
+    "url": "https://vip-4.github.io/lucky-7-casino/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://vip-4.github.io/lucky-7-casino/assets/og-image.png",
+      "width": 1200,
+      "height": 630
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": "https://vip-4.github.io/lucky-7-casino/#game",
+    "name": "幸運 7 老虎機",
+    "applicationCategory": "GameApplication",
+    "applicationSubCategory": "Slots",
+    "operatingSystem": "任何支援 HTML5 的現代瀏覽器",
+    "url": "https://vip-4.github.io/lucky-7-casino/#game",
+    "description": "3×3 滾輪、3 條賠付線的輕量級老虎機遊戲。使用 Canvas 2D 與 Web Audio API，無外部套件，籌碼為虛擬性質。",
+    "inLanguage": "zh-Hant",
+    "isAccessibleForFree": true,
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TWD" },
+    "featureList": "Canvas 2D 渲染、3 條賠付線、虛擬籌碼、Web Audio 音效、RWD 自適應、鍵盤操作、減少動態效果支援",
+    "softwareRequirements": "支援 HTML5 Canvas、requestAnimationFrame 與 Web Audio API 的瀏覽器"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://vip-4.github.io/lucky-7-casino/" },
+      { "@type": "ListItem", "position": 2, "name": "幸運 7 老虎機", "item": "https://vip-4.github.io/lucky-7-casino/#game" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://vip-4.github.io/lucky-7-casino/#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "什麼是幸運 7 老虎機？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "幸運 7 老虎機是一款純前端的 HTML5 老虎機示範遊戲，採用 3×3 滾輪與 3 條賠付線。玩家使用虛擬籌碼下注並旋轉滾輪，當同一條賠付線出現三個相同符號即可獲得虛擬籌碼獎勵。它不涉及真實金錢，僅供技術展示與娛樂。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "這款遊戲需要註冊或下載嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "不需要。遊戲為靜態單頁，所有的 HTML、CSS 與 JavaScript 都可以直接由瀏覽器執行，無需後端、會員系統或任何外掛程式。首次點擊或按鍵會解鎖 Web Audio 音效。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何計算中獎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "每次旋轉後，系統會檢查上、中、下三條水平賠付線。若任一條線上的三個符號相同，即依該符號的倍率乘以本次下注額派發虛擬籌碼；多條線同時中獎時會累加。機率與賠率表可在頁面「遊戲規則」一節查閱。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "前端的隨機數可以用於真實博弈嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "不可以。本示範使用瀏覽器 crypto.getRandomValues 產生隨機數，僅能作為表現層演示。正式博弈平台必須由伺服器端 RNG 決定結果、伺服器結算並記錄可稽核日誌，前端不得決定中獎與派彩，亦不可存放可被竄改的關鍵數值。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "什麼是 GEO 生成式引擎優化？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO（Generative Engine Optimization）是讓內容更容易被 AI 摘要與引用的優化方式。實作重點包括：答案前置的段落結構、語意化標題階層、FAQ 與定義列表、JSON-LD 結構化資料、明確的來源與更新日期，以及不依賴 JavaScript 就能被爬取的文字內容。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "這個站點如何兼顧效能與無障礙？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "站點不使用任何第三方框架或字型，單一 Canvas 搭配物件池粒子效果，並將裝置像素比上限設為 2 以控制填充率。無障礙方面提供跳至內容連結、ARIA 狀態播報、鍵盤旋轉操作、可見焦點樣式，以及尊重 prefers-reduced-motion 的動效降級。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="幸運 7 老虎機首頁">
+        <span class="brand-mark" aria-hidden="true">7</span>
+        <span class="brand-name">LUCKY<b>7</b> LAB</span>
+      </a>
+      <nav aria-label="主要導覽">
+        <ul class="nav-list">
+          <li><a href="#game">開始遊戲</a></li>
+          <li><a href="#rules">遊戲規則</a></li>
+          <li><a href="#open-source">開源來源</a></li>
+          <li><a href="#faq">常見問題</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <!-- ============ 首屏：答案前置，利於 AI 摘要 ============ -->
+      <section id="top" class="hero" aria-labelledby="page-title">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">CASINO H5 · 開源示範專案</p>
+            <h1 id="page-title">幸運 7 老虎機：輕量、可索引、可被 AI 引用的靜態博弈遊戲</h1>
+            <p class="lead">
+              這是一款可直接部署到靜態託管平台的 HTML5 老虎機示範：<strong>3×3 滾輪、3 條賠付線、純前端 Canvas 渲染</strong>，不依賴後端與外部套件。
+              籌碼完全虛擬，不涉及真實金錢交易；同時做為 SEO 與 GEO 優化的實作範本，展示語意化結構、完整 meta、JSON-LD 與可摘要內容該如何落地。
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#game">立即試玩</a>
+              <a class="btn btn-ghost" href="#implementation">查看實作要點</a>
+            </div>
+            <dl class="quick-facts" aria-label="快速資訊">
+              <div><dt>渲染方式</dt><dd>Canvas 2D</dd></div>
+              <div><dt>外部依賴</dt><dd>0 個</dd></div>
+              <div><dt>授權</dt><dd>MIT（示範）</dd></div>
+              <div><dt>更新日期</dt><dd><time datetime="2026-11-23">2026-11-23</time></dd></div>
+            </dl>
+          </div>
+
+          <!-- ============ 遊戲區 ============ -->
+          <section id="game" class="game-card" aria-labelledby="game-title">
+            <div class="game-card-head">
+              <h2 id="game-title">幸運 7 老虎機</h2>
+              <p class="game-subtitle">虛擬籌碼 · 僅供娛樂</p>
+            </div>
+
+            <div class="wallet" aria-label="籌碼與下注資訊">
+              <div class="wallet-item">
+                <span class="wallet-label">籌碼</span>
+                <output id="credits" aria-live="polite">1,000</output>
+              </div>
+              <div class="wallet-item">
+                <span class="wallet-label">下注</span>
+                <output id="bet" aria-live="polite">25</output>
+              </div>
+              <div class="wallet-item">
+                <span class="wallet-label">上一局</span>
+                <output id="last-win" aria-live="polite">—</output>
+              </div>
+            </div>
+
+            <canvas id="reels" width="600" height="360" role="img"
+              aria-label="老虎機滾輪區域，顯示三列三行共九個符號">
+              您的瀏覽器不支援 HTML5 Canvas，請使用現代瀏覽器開啟本頁。
+            </canvas>
+
+            <p id="status" class="status" role="status" aria-live="polite">準備就緒。選擇下注額後即可旋轉。</p>
+
+            <div class="controls">
+              <fieldset class="bet-group">
+                <legend>下注額</legend>
+                <label><input type="radio" name="bet" value="10"> 10</label>
+                <label><input type="radio" name="bet" value="25" checked> 25</label>
+                <label><input type="radio" name="bet" value="50"> 50</label>
+              </fieldset>
+              <button id="spin" class="btn btn-spin" type="button" aria-keyshortcuts="Space">
+                <span aria-hidden="true">▶</span> 旋轉 <kbd>Space</kbd>
+              </button>
+            </div>
+
+            <div class="controls controls-secondary">
+              <button id="sound" class="btn btn-mini" type="button" aria-pressed="true">音效：開</button>
+              <button id="reset" class="btn btn-mini" type="button">重置籌碼</button>
+            </div>
+
+            <p class="game-note">
+              提示：點擊或按鍵後才會解鎖音效，此為 iOS Safari 的限制。本遊戲不含真實金錢下注功能。
+            </p>
+          </section>
+        </div>
+      </section>
+
+      <!-- ============ 規則：定義列表方便 AI 抽取 ============ -->
+      <section id="rules" class="section" aria-labelledby="rules-title">
+        <div class="wrap">
+          <h2 id="rules-title">遊戲規則與賠率</h2>
+          <p class="section-lead">
+            每局扣除所選下注額後旋轉滾輪。系統由上至下檢查三條水平賠付線；同一條線出現三個相同符號即中獎，多線中獎可累加。
+          </p>
+
+          <div class="table-scroll">
+            <table class="paytable">
+              <caption>表 1：符號賠率表（派彩 = 下注額 × 倍率）</caption>
+              <thead>
+                <tr><th scope="col">符號</th><th scope="col">名稱</th><th scope="col">三個連線倍率</th><th scope="col">相對權重</th></tr>
+              </thead>
+              <tbody>
+                <tr><td aria-hidden="true">🍒</td><td>櫻桃</td><td>×5</td><td>30</td></tr>
+                <tr><td aria-hidden="true">🍋</td><td>檸檬</td><td>×8</td><td>24</td></tr>
+                <tr><td aria-hidden="true">🔔</td><td>鈴鐺</td><td>×12</td><td>18</td></tr>
+                <tr><td aria-hidden="true">⭐</td><td>星星</td><td>×20</td><td>12</td></tr>
+                <tr><td aria-hidden="true">💎</td><td>鑽石</td><td>×35</td><td>8</td></tr>
+                <tr><td aria-hidden="true">7️⃣</td><td>幸運 7</td><td>×80</td><td>3</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <dl class="def-list">
+            <div>
+              <dt>賠付線（Payline）</dt>
+              <dd>本遊戲固定三條水平線：上排、中排、下排。從左至右讀取三個符號。</dd>
+            </div>
+            <div>
+              <dt>加權隨機（Weighted RNG）</dt>
+              <dd>每個符號依權重被抽取，權重越高出現越頻繁；此機制只控制視覺結果，不代表任何真實博弈公平性。</dd>
+            </div>
+            <div>
+              <dt>狀態機（FSM）</dt>
+              <dd>遊戲在 Idle → Spinning → Evaluating → Idle 之間轉換，避免重複下注與競態條件。</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ============ 實作要點：給工程師與 AI 的結構化說明 ============ -->
+      <section id="implementation" class="section section-alt" aria-labelledby="impl-title">
+        <div class="wrap">
+          <h2 id="impl-title">SEO、GEO 與工程實作要點</h2>
+          <p class="section-lead">
+            本節說明站點如何同時滿足搜尋引擎爬索引與生成式引擎摘要引用，並兼顧行動端效能與無障礙。
+          </p>
+
+          <div class="feature-grid">
+            <article class="feature">
+              <h3>SEO：可被發現</h3>
+              <ul>
+                <li>完整 title、description、keywords、robots 與 canonical。</li>
+                <li>Open Graph 與 Twitter Card，包含 1200×630 圖片與維度宣告。</li>
+                <li>JSON-LD：WebSite、Organization、SoftwareApplication、BreadcrumbList、FAQPage。</li>
+                <li><code>robots.txt</code> 與 <code>sitemap.xml</code> 便於爬蟲發現。</li>
+              </ul>
+            </article>
+            <article class="feature">
+              <h3>GEO：可被引用</h3>
+              <ul>
+                <li>答案前置段落，每段可獨立摘要，不依賴上下文。</li>
+                <li>語意化 <code>h1–h3</code>、<code>dl</code>、<code>table</code> 與 FAQ 區塊。</li>
+                <li>頁面文字靜態存在於 HTML，不需執行 JavaScript 即可讀取。</li>
+                <li><code>llms.txt</code> 提供給 AI 爬蟲的精簡結構化摘要。</li>
+              </ul>
+            </article>
+            <article class="feature">
+              <h3>效能：60 FPS 目標</h3>
+              <ul>
+                <li>零第三方套件、零外部字型，總資源體積維持在數十 KB 等級。</li>
+                <li>單一 Canvas + 物件池粒子，避免頻繁配置造成的 GC 卡頓。</li>
+                <li>裝置像素比上限設為 2，降低高 DPI 手機填充率負擔。</li>
+                <li><code>requestAnimationFrame</code> 統一渲染，分頁隱藏時暫停。</li>
+              </ul>
+            </article>
+            <article class="feature">
+              <h3>無障礙與相容性</h3>
+              <ul>
+                <li>跳至內容連結、ARIA live 狀態播報、可見焦點樣式。</li>
+                <li>支援空白鍵旋轉與 <code>prefers-reduced-motion</code> 動效降級。</li>
+                <li>WebGL 上下文遺失以防禦性設計規避：本作使用 Canvas 2D，無 WebGL 依賴。</li>
+                <li>音效需使用者手勢解鎖，符合 iOS Safari 自動播放政策。</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 開源來源：如實標註來源與動態性質 ============ -->
+      <section id="open-source" class="section" aria-labelledby="os-title">
+        <div class="wrap">
+          <h2 id="os-title">精選開源遊戲與靈感來源</h2>
+          <p class="section-lead">
+            下列來源用於技術參考與靈感蒐集，均為公開可查的專案或索引頁。熱榜與標籤頁內容每日變動，請以來源頁面現況為準；本示範並未複製其程式碼或素材。
+          </p>
+
+          <div class="table-scroll">
+            <table class="source-table">
+              <caption>表 2：開源來源索引</caption>
+              <thead>
+                <tr><th scope="col">來源</th><th scope="col">類型</th><th scope="col">可參考之處</th><th scope="col">連結</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">GitHub Topic: open-source-games</th>
+                  <td>索引</td>
+                  <td>以 topics 彙整開源遊戲，適合尋找可研究的專案結構。</td>
+                  <td><a href="https://github.com/topics/open-source-games" rel="noopener noreferrer">開啟來源</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">GitHub Topic: js13kgames</th>
+                  <td>Game Jam</td>
+                  <td>13 KB 限制下的極致壓縮技巧，適合學習效能取捨。</td>
+                  <td><a href="https://github.com/topics/js13kgames" rel="noopener noreferrer">開啟來源</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">GitHub Trending（每日）</th>
+                  <td>動態榜單</td>
+                  <td>觀察當日新興遊戲與引擎專案，需每日重新查看。</td>
+                  <td><a href="https://github.com/trending?since=daily" rel="noopener noreferrer">開啟來源</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">Ludum Dare 官方組織</th>
+                  <td>組織 / Jam</td>
+                  <td>官方 repo 多為 Jam 平台原始碼；實際參賽作品散見於 ldjam.com 與 itch.io。</td>
+                  <td><a href="https://github.com/orgs/LudumDare/repositories" rel="noopener noreferrer">開啟來源</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">Ludum Dare 作品站</th>
+                  <td>作品庫</td>
+                  <td>依 Jam 屆次瀏覽參賽遊戲，適合觀察快速原型設計。</td>
+                  <td><a href="https://ldjam.com/" rel="noopener noreferrer">開啟來源</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">itch.io 開源標籤</th>
+                  <td>標籤頁</td>
+                  <td>以 open-source 標籤篩選可取得原始碼的獨立遊戲。</td>
+                  <td><a href="https://itch.io/games/open-source" rel="noopener noreferrer">開啟來源</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">Simple Game Tutorials</th>
+                  <td>教學</td>
+                  <td>逐步從零寫出小遊戲，提供 LÖVE 與 Pygame Zero 兩條路線。</td>
+                  <td><a href="https://simplegametutorials.github.io/" rel="noopener noreferrer">開啟來源</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">Phaser 3 / PixiJS</th>
+                  <td>引擎</td>
+                  <td>HTML5 遊戲主流框架，可作為本示範由 Canvas 2D 升級的路徑。</td>
+                  <td><a href="https://github.com/phaserjs/phaser" rel="noopener noreferrer">Phaser 3</a> · <a href="https://github.com/pixijs/pixijs" rel="noopener noreferrer">PixiJS</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="source-note">
+            補充說明：GitHub Trending、itch.io 標籤頁與 Ludum Dare 作品庫皆為動態內容，無法保證特定條目長期存在。若需要固定版本的引用清單，建議自行存檔 URL 與擷取日期。
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ FAQ：與 JSON-LD 內容一致 ============ -->
+      <section id="faq" class="section section-alt" aria-labelledby="faq-title">
+        <div class="wrap">
+          <h2 id="faq-title">常見問題</h2>
+
+          <div class="faq-list">
+            <details open>
+              <summary>什麼是幸運 7 老虎機？</summary>
+              <p>幸運 7 老虎機是一款純前端的 HTML5 老虎機示範遊戲，採用 3×3 滾輪與 3 條賠付線。玩家使用虛擬籌碼下注並旋轉滾輪，當同一條賠付線出現三個相同符號即可獲得虛擬籌碼獎勵。它不涉及真實金錢，僅供技術展示與娛樂。</p>
+            </details>
+            <details>
+              <summary>這款遊戲需要註冊或下載嗎？</summary>
+              <p>不需要。遊戲為靜態單頁，所有的 HTML、CSS 與 JavaScript 都可以直接由瀏覽器執行，無需後端、會員系統或任何外掛程式。首次點擊或按鍵會解鎖 Web Audio 音效。</p>
+            </details>
+            <details>
+              <summary>如何計算中獎？</summary>
+              <p>每次旋轉後，系統會檢查上、中、下三條水平賠付線。若任一條線上的三個符號相同，即依該符號的倍率乘以本次下注額派發虛擬籌碼；多條線同時中獎時會累加。機率與賠率表可在頁面「遊戲規則」一節查閱。</p>
+            </details>
+            <details>
+              <summary>前端的隨機數可以用於真實博弈嗎？</summary>
+              <p>不可以。本示範使用瀏覽器 crypto.getRandomValues 產生隨機數，僅能作為表現層演示。正式博弈平台必須由伺服器端 RNG 決定結果、伺服器結算並記錄可稽核日誌，前端不得決定中獎與派彩，亦不可存放可被竄改的關鍵數值。</p>
+            </details>
+            <details>
+              <summary>什麼是 GEO 生成式引擎優化？</summary>
+              <p>GEO（Generative Engine Optimization）是讓內容更容易被 AI 摘要與引用的優化方式。實作重點包括：答案前置的段落結構、語意化標題階層、FAQ 與定義列表、JSON-LD 結構化資料、明確的來源與更新日期，以及不依賴 JavaScript 就能被爬取的文字內容。</p>
+            </details>
+            <details>
+              <summary>這個站點如何兼顧效能與無障礙？</summary>
+              <p>站點不使用任何第三方框架或字型，單一 Canvas 搭配物件池粒子效果，並將裝置像素比上限設為 2 以控制填充率。無障礙方面提供跳至內容連結、ARIA 狀態播報、鍵盤旋轉操作、可見焦點樣式，以及尊重 prefers-reduced-motion 的動效降級。</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 免責聲明 ============ -->
+      <section id="disclaimer" class="section" aria-labelledby="disclaimer-title">
+        <div class="wrap disclaimer">
+          <h2 id="disclaimer-title">免責與合規聲明</h2>
+          <p>
+            本專案為技術示範，所有籌碼、下注與派彩均為虛擬數值，不具任何現金價值，亦不提供提領、儲值或真實博弈服務。
+            僅供年滿 18 歲（或所在地法定年齡）之人士觀看與體驗。若您所處司法管轄區禁止此類內容，請勿使用。
+            正式上線之博弈服務需取得當地主管機關許可，並落實年齡驗證、責任博弈機制與伺服器端公平性稽核。
+          </p>
+          <p class="source-note">最後更新：<time datetime="2026-11-23">2026 年 11 月 23 日</time> · 作者：Lucky7 Lab</p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© 2026 Lucky7 Lab · 開源 H5 遊戲與 SEO/GEO 示範</p>
+      <nav aria-label="頁尾導覽">
+        <a href="#top">回到頂部</a>
+        <a href="sitemap.xml">網站地圖</a>
+        <a href="llms.txt">AI 摘要檔</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/game.js" defer></script>
+</body>
+</html>

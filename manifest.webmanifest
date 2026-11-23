@@ -1,0 +1,20 @@
+{
+  "name": "幸運 7 老虎機｜Casino H5 遊戲示範",
+  "short_name": "幸運 7",
+  "description": "純前端 HTML5 老虎機示範，虛擬籌碼，僅供娛樂。",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b1021",
+  "theme_color": "#0b1021",
+  "lang": "zh-Hant",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
