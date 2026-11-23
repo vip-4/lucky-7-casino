@@ -1,13 +1,14 @@
 # Lucky7 Casino Hub
 
-四款輕量 H5 博弈遊戲整合於單一靜態首頁：幸運 7 老虎機、歐式輪盤、21 點與百家樂。
+五款輕量 H5 遊戲整合於單一靜態首頁：幸運 7 老虎機、歐式輪盤、21 點、百家樂與原創輕量賽車。
 
 ## 特性
 
 - 純前端、零外部依賴、零建置流程
-- 四款遊戲共用同一組虛擬籌碼（localStorage）
-- Canvas 2D 老虎機與輪盤、DOM 撲克牌遊戲
-- 完整 SEO / GEO：meta、Open Graph、Twitter Card、九組 JSON-LD、`robots.txt`、`sitemap.xml`、`llms.txt`
+- 五款遊戲共用同一組虛擬籌碼（localStorage）
+- Canvas 2D 老虎機、輪盤與原創 pseudo-3D 賽車，DOM 撲克牌遊戲
+- 賽車為原創實作：分段道路透視投影、彎道坡道、對手車碰撞、三圈計時與名次派彩；未使用外部專案程式碼或素材
+- 完整 SEO / GEO：meta、Open Graph、Twitter Card、十組 JSON-LD、`robots.txt`、`sitemap.xml`、`llms.txt`
 - RWD、鍵盤操作、ARIA live region、`prefers-reduced-motion`
 
 ## 本機預覽
@@ -30,6 +31,7 @@ index.html                  語意化首頁（所有遊戲內容皆在 HTML 中�
 assets/core.js              RNG / 共用籌包 / 音效
 assets/slots.js             老虎機
 assets/table-games.js       輪盤 / 21 點 / 百家樂
+assets/racer.js             原創輕量賽車
 assets/lobby.js             分頁切換與籌包同步
 assets/styles.css           全域樣式
 assets/og-image.png         1200×630 Open Graph 圖片
