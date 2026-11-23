@@ -918,6 +918,51 @@ tbody th { color: var(--text); font-weight: 700; }
 
 .status.is-lose { color: var(--danger); }
 
+/* 原創輕量賽車 */
+#racer-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 600 / 340;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #0b1021;
+  touch-action: none;
+}
+.racer-hud {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(108px, 1fr));
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+.racer-hud > div {
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.7rem;
+}
+.racer-hud dt { font-size: 0.72rem; color: var(--text-muted); }
+.racer-hud dd {
+  margin: 0.18rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--gold-soft);
+  font-variant-numeric: tabular-nums;
+}
+.racer-controls kbd {
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 0.05em 0.35em;
+  border: 1px solid var(--border);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  background: var(--surface-2);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.85em;
+  text-align: center;
+}
+
 @media (max-width: 860px) {
   .roulette-grid { grid-template-columns: 1fr; }
   #roulette-wheel { max-width: 300px; }
