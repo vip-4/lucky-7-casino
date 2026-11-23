@@ -118,9 +118,9 @@ def main():
     round_rect(px, 70, 160, 1130, 510, 24, CARD)
 
     draw_text(px, "LUCKY7 CASINO HUB", 110, 205, 7, GOLD)
-    draw_text(px, "4 GAMES IN 1 STATIC PAGE", 110, 290, 4, TEXT)
+    draw_text(px, "5 GAMES IN 1 STATIC PAGE", 110, 290, 4, TEXT)
 
-    draw_text(px, "SLOTS / ROULETTE / BLACKJACK / BACCARAT", 110, 360, 3, GOLD)
+    draw_text(px, "SLOTS / ROULETTE / BLACKJACK / BACCARAT / RACING", 110, 360, 3, GOLD)
     draw_text(px, "SHARED VIRTUAL CHIPS  -  NO INSTALL", 110, 405, 3, MUTED)
     draw_text(px, "PURE FRONTEND  -  SEO + GEO READY", 110, 450, 3, GREEN)
 
