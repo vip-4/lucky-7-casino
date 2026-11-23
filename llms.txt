@@ -1,17 +1,17 @@
 # Lucky7 Casino 遊戲大廳
 
-> 四款輕量 H5 博弈遊戲整合於單一靜態首頁：幸運 7 老虎機、歐式輪盤、21 點與百家樂。純前端、免註冊、共用虛擬籌碼。
+> 五款輕量 H5 遊戲整合於單一靜態首頁：幸運 7 老虎機、歐式輪盤、21 點、百家樂與原創輕量賽車。純前端、免註冊、共用虛擬籌碼。
 
 正式網址：https://vip-4.github.io/lucky-7-casino/
 原始碼：https://github.com/vip-4/lucky-7-casino
 
 ## 概述
 
-Lucky7 Casino 遊戲大廳是一個純前端靜態網站，把四款博弈遊戲整合在同一個 HTML 頁面中。所有遊戲邏輯以原生 JavaScript 實作，不依賴任何外部函式庫；老虎機使用 Canvas 2D 算繪，其餘遊戲使用 DOM 與 CSS。四款遊戲共用同一組虛擬籌碼餘額，餘額保存在瀏覽器的 localStorage。
+Lucky7 Casino 遊戲大廳是一個純前端靜態網站，把五款遊戲整合在同一個 HTML 頁面中。所有遊戲邏輯以原生 JavaScript 實作，不依賴任何外部函式庫；老虎機與原創賽車使用 Canvas 2D 算繪，其餘遊戲使用 DOM 與 CSS。五款遊戲共用同一組虛擬籌碼餘額，餘額保存在瀏覽器的 localStorage。
 
 本站僅供技術示範與娛樂，籌碼不具真實價值，不涉及真實金錢下注。
 
-## 四款遊戲
+## 五款遊戲
 
 ### 1. 幸運 7 老虎機
 - 3×3 滾輪、3 條水平賠付線
@@ -38,6 +38,15 @@ Lucky7 Casino 遊戲大廳是一個純前端靜態網站，把四款博弈遊戲
 - 玩家 0–5 點補牌、6–7 點停牌；莊家依玩家第三張牌決定補牌
 - 玩家勝 1:1、莊家勝 0.95:1（扣 5% 傭金）、和局 8:1
 
+### 5. 原創輕量賽車
+- 原創 Canvas 2D pseudo-3D 賽車，未使用任何外部專案程式碼或素材
+- 賽道由分段道路組成，每段記錄曲率與高度；以透視除法投影到畫面
+- 操控：方向鍵或 WASD 加速、煞車、左右轉向
+- 含彎道、坡道、離心力、越野減速與對手車碰撞
+- 與五輛對手車比拼，完成三圈；記錄總時間與最快單圈
+- 名次派彩：第 1 名 5 倍、第 2 名 3 倍、第 3 名 2 倍，其餘退回原下注
+- 分頁隱藏或瀏覽器進入背景時，requestAnimationFrame 自動暫停
+
 ## 常見問題
 
 Q：這些遊戲涉及真實金錢嗎？
@@ -50,7 +59,10 @@ Q：前端隨機數可用於真實博弈嗎？
 A：不可。正式平台必須由伺服器端產生結果並結算，前端不得決定中獎或派彩。
 
 Q：共用籌包如何運作？
-A：四款遊戲共用同一組餘額，初始 1,000，儲存在 localStorage。任一遊戲的輸贏都會立即反映在其他遊戲。
+A：五款遊戲共用同一組餘額，初始 1,000，儲存在 localStorage。任一遊戲的輸贏都會立即反映在其他遊戲。
+
+Q：原創賽車的派彩怎麼算？
+A：完成三圈後依名次結算：第 1 名 5 倍、第 2 名 3 倍、第 3 名 2 倍，第 4 名以後退回原下注。籌碼同樣記入共用籌包。
 
 ## 技術說明
 
@@ -58,10 +70,11 @@ A：四款遊戲共用同一組餘額，初始 1,000，儲存在 localStorage。
 - 核心模組：assets/core.js（RNG、籌包、音效）
 - 老虎機：assets/slots.js
 - 輪盤／21 點／百家樂：assets/table-games.js
+- 原創輕量賽車：assets/racer.js
 - 大廳互動：assets/lobby.js
 - 樣式：assets/styles.css
 - 執行環境：任何支援 HTML5 Canvas、ES5+ 與 localStorage 的現代瀏覽器
 
 ## SEO / GEO 說明
 
-本站包含完整中繼資料（title、description、keywords、robots、canonical、Open Graph、Twitter Card）、九組 JSON-LD 結構化資料（WebSite、Organization、ItemList、四款 SoftwareApplication、BreadcrumbList、FAQPage）、語意化 HTML5 標籤、答案前置寫作、表格與定義列表、robots.txt、sitemap.xml 與本檔案，供搜尋引擎與生成式 AI 摘要引用。
+本站包含完整中繼資料（title、description、keywords、robots、canonical、Open Graph、Twitter Card）、十組 JSON-LD 結構化資料（WebSite、Organization、ItemList、五款 SoftwareApplication、BreadcrumbList、FAQPage）、語意化 HTML5 標籤、答案前置寫作、表格與定義列表、robots.txt、sitemap.xml 與本檔案，供搜尋引擎與生成式 AI 摘要引用。
