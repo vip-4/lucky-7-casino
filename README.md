@@ -10,7 +10,7 @@
 - 賽車為原創實作：分段道路透視投影、彎道坡道、對手車碰撞、三圈計時與名次派彩；未使用外部專案程式碼或素材
 - 完整 SEO / GEO：meta、Open Graph、Twitter Card、十組 JSON-LD、`robots.txt`、`sitemap.xml`、`llms.txt`
 - RWD、鍵盤操作、ARIA live region、`prefers-reduced-motion`
-- 「更多開源遊戲」區塊收錄已驗證的真實開源專案（含 mini-browser-games 130 款單檔遊戲，MIT 授權），僅提供連結與署名
+- 「更多開源遊戲」區塊收錄已驗證的真實開源專案（含 mini-browser-games 130 款單檔遊戲 MIT、Open-Source-Games 189 款遊戲目錄 CC BY-NC-SA 4.0），僅提供連結與署名
 
 ## 本機預覽
 
