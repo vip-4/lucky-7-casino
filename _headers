@@ -1,0 +1,26 @@
+# Cloudflare Pages 靜態託管回應標頭
+# 安全標頭：套用至所有路徑（不設定 X-Frame-Options，避免影響內嵌預覽）
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# HTML：每次重新驗證，確保 SEO 中繼資料更新能即時生效
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/robots.txt
+  Cache-Control: public, max-age=3600
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+
+/llms.txt
+  Cache-Control: public, max-age=3600
+
+/manifest.webmanifest
+  Cache-Control: public, max-age=3600
+
+# 靜態資源：一天快取，兼顧效能與更新彈性
+/assets/*
+  Cache-Control: public, max-age=86400
