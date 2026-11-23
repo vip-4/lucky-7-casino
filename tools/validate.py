@@ -10,7 +10,7 @@ html = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
 errors = []
 
 blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)
-if len(blocks) != 9:
+if len(blocks) != 10:
     errors.append(f"JSON-LD 區塊數量不符合預期：{len(blocks)}")
 else:
     types = []
@@ -26,8 +26,8 @@ else:
     }
     if not expected.issubset(set(types)):
         errors.append(f"JSON-LD 類型不符：{types}")
-    if types.count("SoftwareApplication") != 4:
-        errors.append(f"SoftwareApplication 數量應為 4，實際 {types.count('SoftwareApplication')}")
+    if types.count("SoftwareApplication") != 5:
+        errors.append(f"SoftwareApplication 數量應為 5，實際 {types.count('SoftwareApplication')}")
 
 required_meta = [
     '<meta charset="utf-8">',
@@ -52,18 +52,18 @@ for tag in semantic:
     if tag not in html:
         errors.append(f"缺少語意化標籤：{tag}")
 
-for game_id in ["panel-slots", "panel-roulette", "panel-blackjack", "panel-baccarat"]:
+for game_id in ["panel-slots", "panel-roulette", "panel-blackjack", "panel-baccarat", "panel-racer"]:
     if f'id="{game_id}"' not in html:
         errors.append(f"缺少遊戲面板：{game_id}")
 
-for script in ["core.js", "slots.js", "table-games.js", "lobby.js"]:
+for script in ["core.js", "slots.js", "table-games.js", "racer.js", "lobby.js"]:
     if f'assets/{script}' not in html:
         errors.append(f"缺少腳本引用：{script}")
 
 required_files = [
     "index.html", "robots.txt", "sitemap.xml", "llms.txt", "manifest.webmanifest",
     "LICENSE", "README.md", "_headers",
-    "assets/core.js", "assets/slots.js", "assets/table-games.js", "assets/lobby.js",
+    "assets/core.js", "assets/slots.js", "assets/table-games.js", "assets/racer.js", "assets/lobby.js",
     "assets/styles.css", "assets/favicon.svg", "assets/og-image.png",
 ]
 for rel in required_files:
@@ -73,8 +73,8 @@ for rel in required_files:
 if "vip-4.github.io/lucky-7-casino" not in html:
     errors.append("canonical / OG 網域不正確")
 
-if len(re.findall(r'role="tab"', html)) != 4:
-    errors.append("遊戲分頁數量應為 4")
+if len(re.findall(r'role="tab"', html)) != 5:
+    errors.append("遊戲分頁數量應為 5")
 
 if errors:
     print("驗證失敗：")
@@ -83,4 +83,4 @@ if errors:
     sys.exit(1)
 
 print(f"檢查通過：{len(blocks)} 組 JSON-LD、{len(required_meta)} 個必要 meta、"
-      f"{len(required_files)} 個必要檔案、4 款遊戲面板皆完整。")
+      f"{len(required_files)} 個必要檔案、5 款遊戲面板皆完整。")
