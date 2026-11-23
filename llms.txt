@@ -83,6 +83,7 @@ A：完成三圈後依名次結算：第 1 名 5 倍、第 2 名 3 倍、第 3 �
 - 巔峰漂移巡回賽 drift-racer.html（MIT）：單檔 Canvas 賽車，含生涯模式、幽靈紀錄與存檔碼
 - 霓虹二十一點 blackjack-table.html（MIT）：單檔 21 點，含要牌、停牌、加倍與莊家補牌
 - 骰子地牢 dice-delver.html（MIT）：骰子驅動 Roguelike 單檔遊戲
+- 開源遊戲清單 Open-Source-Games（201flaviosilva-labs/Open-Source-Games，CC BY-NC-SA 4.0）：189 款网页版與桌面版開源遊戲目錄，含射擊、策略、RPG、賽車與益智；線上目錄 https://201flaviosilva-labs.github.io/Open-Source-Games/
 
 來源篩選標準：只收錄可驗證原始碼與授權的倉庫；排除無法驗證或帶有混淆跳轉的專案。
 
