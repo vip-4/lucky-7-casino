@@ -86,6 +86,7 @@ A：完成三圈後依名次結算：第 1 名 5 倍、第 2 名 3 倍、第 3 �
 - 開源遊戲清單 Open-Source-Games（201flaviosilva-labs/Open-Source-Games，CC BY-NC-SA 4.0）：189 款网页版與桌面版開源遊戲目錄，含射擊、策略、RPG、賽車與益智；線上目錄 https://201flaviosilva-labs.github.io/Open-Source-Games/
 - Games Hub（sausi-7/games，MIT）：142 款可立即遊玩的單頁遊戲大廳，Phaser 128 款 / 原生 JS 10 款 / Three.js 4 款，10 個分類（3D、arcade、board、casual、platformer、puzzle、racing、shooter、sports、word-quiz），含搜尋、分類篩選、深層連結與暗色模式；線上大廳 https://sausi-7.github.io/games/
 - Open Star Fighter（teeeece/godot_open_star_fighter，MIT）：Godot 4.0.1 原生太空射擊遊戲，含团队死斗（先 30 殺獲勝）與穿越圈圈竞速模式，36 stars、real commits、itch.io 提供 Windows/Linux 本機版；無网页版，本站未嘗試編譯（Godot 4.0.1 無頭模式在本環境无法导入资源，非專案缺陷）。原始碼與可遊玩版本：https://teeeece.itch.io/open-star-fighter
+- Queens（sidhant947/Queens，GPL-3.0）：Flutter 原生 crown-placement 邏輯益智遊戲（150+ 關卡，5×5–16×16，程序生成無限關卡），已編譯為 WebAssembly 網頁版部署於 https://vip-4.github.io/queens/ 與 https://queens-cuo.pages.dev/；免廣告、無追蹤、100% 離線；原始碼 https://github.com/sidhant947/Queens
 
 來源篩選標準：只收錄可驗證原始碼與授權的倉庫；排除無法驗證或帶有混淆跳轉的專案。
 
